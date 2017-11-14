@@ -1,0 +1,25 @@
+.wrapper {
+	overflow: hidden; /* hide any overflow, used to hide the extra right padding on a column */
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&--b-margin {
+		margin-bottom: 1rem;
+
+		@mixin atSmall{
+			margin-bottom: 3.875rem;
+		}
+	}
+
+	&--medium {
+		max-width: 976px;
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

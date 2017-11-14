@@ -1,0 +1,44 @@
+.row {
+	@mixin clearFix;
+
+	&--gutters {
+		margin-right: -65px; /* needed to add space for the right padding from the last column
+														without affecting the percentage ratio of the columns */
+	}
+
+	&--gutters > div {
+		padding-right: 65px; /* add padding on the right of each column */
+		/* local fix, see _global.css for global setting
+		box-sizing: border-box; /* include padding in width percentage calculation /
+		*/
+	}
+
+	&__b-margin-until-medium{
+		margin-bottom: 1rem;
+	}
+
+	@mixin atMedium{
+
+	&__b-margin-until-medium{
+		margin-bottom: 0;
+	}
+
+		&__medium-4 {
+			float: left;
+			width: 33.33%;
+		}
+
+		&__medium-4--larger {
+			width: 37%;
+		}
+
+		&__medium-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		&__medium-8--smaller {
+			width: 63%;
+		}
+	}
+}
