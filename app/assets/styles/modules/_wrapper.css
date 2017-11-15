@@ -1,7 +1,5 @@
 .wrapper {
 	overflow: hidden; /* hide any overflow, used to hide the extra right padding on a column */
-	padding-left: 18px;
-	padding-right: 18px;
 	max-width: 1236px;
 	margin-left: auto;
 	margin-right: auto;
@@ -16,6 +14,16 @@
 
 	&--medium {
 		max-width: 976px;
+	}
+
+	&--no-padding-until-medium{
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atMedium {
+			padding-left: 18px;
+			padding-right: 18px;
+		}
 	}
 
 	.wrapper {

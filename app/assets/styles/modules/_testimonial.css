@@ -1,0 +1,43 @@
+.testimonial {
+	background-color: rgba(255,255,255,.8);
+	padding: 0 18px 1px 18px; /* need at least 1px bottom margin for paragraph text to request extra space */
+	margin-bottom: 98px;
+
+	@mixin atMedium {
+		padding: 0 1.8125rem 1px 1.8125rem; /* need at least 1px bottom margin for paragraph text to request extra space */
+		margin-bottom: 0;
+	}
+
+	&--last {
+		margin-bottom: 0; 
+	}
+
+	&__photo {
+		overflow: hidden; /* don't show pic when outside border of div */
+		border-radius: 80px; /* radius 1/2 div size makes div a circle */
+		width: 160px; /* match div to pic size */
+		height: 160px; /* match div to pic size */
+		margin: 0 auto -80px auto; /* center, adjust bottom margin to pull up text
+																	that was left behind when the div was shifted
+																	upward. See position & top. */
+		position: relative; /* position relative to contaier */
+		top: -80px; /* shift up 1/2 the height of the pic */
+		border: 6px solid rgba(255,255,255,.8);
+	}
+
+	&__title {
+		color: $mainBlue;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	&__subtitle {
+		color: $mainOrange;
+		text-align: center;
+		font-weight: 400;
+		font-size: .9375rem;
+		margin: .25rem 0 1rem;
+	}
+}
