@@ -3,13 +3,13 @@
 	padding: 0 18px 1px 18px; /* need at least 1px bottom margin for paragraph text to request extra space */
 	margin-bottom: 98px;
 
-	@mixin atMedium {
+	@mixin atLarge {
 		padding: 0 1.8125rem 1px 1.8125rem; /* need at least 1px bottom margin for paragraph text to request extra space */
 		margin-bottom: 0;
 	}
 
 	&--last {
-		margin-bottom: 0; 
+		margin-bottom: 0;
 	}
 
 	&__photo {
