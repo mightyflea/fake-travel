@@ -1,0 +1,17 @@
+/* Do not edit modules/_sprite.css, directly, as it is automatically generated
+ 	by Gulp. Edit gulp/templates/sprite.css */
+/* variables names come from gulp-svg-sprite GitHub page */
+{{#shapes}}
+	{{#first}}
+		.icon {
+			/*display: inline-block;*/
+			background-image: url('/assets/images/sprites/{{{sprite}}}'); /* {{{}}} because we don't want characters to be escaped */
+		}
+	{{/first}}
+
+	.icon--{{base}} {
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-position: {{position.relative.xy}};
+	}
+{{/shapes}}
