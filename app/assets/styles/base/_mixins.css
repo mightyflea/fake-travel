@@ -18,7 +18,7 @@
 
 /* creates a bit of empty content to clear the float status for all following content */
 @define-mixin clearFix{
-	&::after {
+	&::after {/* resulting code: current_context::after {}*/
 		content: ""; /* empty content */
 		clear: both; /* the clear */
 		display: table; /* for browser cross-compatability */
