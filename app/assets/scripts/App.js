@@ -1,6 +1,8 @@
 //var $ = require('jquery');
 var Person = require('./modules/Person');
 
+alert('test1234');
+
 // console.log(Person);
 // console.log(Person.example);
 // Person.exampleFunc();

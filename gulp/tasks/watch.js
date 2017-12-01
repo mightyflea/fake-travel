@@ -9,6 +9,12 @@ gulp.task('cssInject', ['styles'], function(){
 		.pipe(browserSync.stream());
 });
 
+/* run & complete scripts task, then pipe into browserSync, which will refresh
+	the browser */
+gulp.task('scriptsRefresh', ['scripts'], function(){
+	browserSync.reload();
+});
+
 gulp.task('watch', function(){
 
 	//launch the browserSync server and open broswer
@@ -27,4 +33,10 @@ gulp.task('watch', function(){
 	watch('./app/assets/styles/**/*.css', function(){
 		gulp.start('cssInject');
 	});
+
+	//run when any js file in the given directory is saved
+	watch('./app/assets/scripts/**/*.js', function(){
+		gulp.start('scriptsRefresh');
+	});
+
 });

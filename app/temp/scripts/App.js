@@ -70,6 +70,8 @@
 //var $ = require('jquery');
 var Person = __webpack_require__(1);
 
+alert('test1234');
+
 // console.log(Person);
 // console.log(Person.example);
 // Person.exampleFunc();
