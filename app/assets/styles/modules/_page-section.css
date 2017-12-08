@@ -13,8 +13,12 @@
 		background-color: #e0e6ef;
 
 		@mixin atLarge{
-			background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-			background-size: cover;
+			/* 	lazysizes swaps 'lazyload' for this class once an element with
+				'lazyload' class scrolls into view */
+			&.lazyloaded {
+				background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+				background-size: cover;
+			}
 		}
 	}
 
