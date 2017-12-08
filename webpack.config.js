@@ -1,11 +1,17 @@
 var path = require('path');//needed to create absolute path
 
 module.exports = {
-	entry: "./app/assets/scripts/App.js", /* where to start bundling.
-	 	Use an array for multiple start points. Use an object for multiple bundles. */
+	/* 	Use a string for a single start point, an array for multiple start points,
+	 	or an object for multiple bundles. */
+//	entry: "./app/assets/scripts/App.js", // where to start bundling.
+	entry: {
+			App: "./app/assets/scripts/App.js",
+			Vendor: "./app/assets/scripts/Vendor.js"
+		}, // where to start bundling.
 	output: { // where to output the bundle
 		path: path.resolve(__dirname, "./app/temp/scripts"),//must be an absolute path
-		filename: "App.js"
+//		filename: "App.js"
+		filename: "[name].js"
 	},
 	//babel-related code: converts es5 to es6
 	module: {

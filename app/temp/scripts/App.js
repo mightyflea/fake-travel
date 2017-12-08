@@ -11288,6 +11288,8 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
+		//lazy load images
+		this.lazyImages = (0, _jquery2.default)('.lazyload');
 		//sticky header
 		this.siteHeader = (0, _jquery2.default)('.site-header');
 		this.headerTrigger = (0, _jquery2.default)('.large-hero__title');
@@ -11298,9 +11300,20 @@ var StickyHeader = function () {
 		this.createPageSectionWaypoints();
 		//smooth scrolling
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
 	}
 
+	//refresh waypoints whenever a lazyload image is loaded
+
+
 	_createClass(StickyHeader, [{
+		key: 'refreshWaypoints',
+		value: function refreshWaypoints() {
+			this.lazyImages.on('load', function () {
+				Waypoint.refreshAll();
+			});
+		}
+	}, {
 		key: 'addSmoothScrolling',
 		value: function addSmoothScrolling() {
 			this.headerLinks.smoothScroll();
