@@ -3,11 +3,11 @@
 /* variables names come from gulp-svg-sprite GitHub page */
 		.icon {
 			/*display: inline-block;*/
-			background-image: url('/assets/images/sprites/sprite-e79e95cc.svg'); /*  because we don't want characters to be escaped */
+			background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg'); /*  because we don't want characters to be escaped */
 		}
 
 		.no-svg .icon {
-			background-image: url('/assets/images/sprites/sprite-e79e95cc.png'); /*  because we don't want characters to be escaped */
+			background-image: url('../../assets/images/sprites/sprite-e79e95cc.png'); /*  because we don't want characters to be escaped */
 		}
 
 	.icon--clear-view-escapes {

@@ -5,11 +5,11 @@
 	{{#first}}
 		.icon {
 			/*display: inline-block;*/
-			background-image: url('/assets/images/sprites/{{{sprite}}}'); /* {{{}}} because we don't want characters to be escaped */
+			background-image: url('../../assets/images/sprites/{{{sprite}}}'); /* {{{}}} because we don't want characters to be escaped */
 		}
 
 		.no-svg .icon {
-			background-image: url('/assets/images/sprites/{{#replaceSVGWithPNG}}{{{sprite}}}{{/replaceSVGWithPNG}}'); /* {{{}}} because we don't want characters to be escaped */
+			background-image: url('../../assets/images/sprites/{{#replaceSVGWithPNG}}{{{sprite}}}{{/replaceSVGWithPNG}}'); /* {{{}}} because we don't want characters to be escaped */
 		}
 	{{/first}}
 
